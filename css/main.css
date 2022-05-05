@@ -1,0 +1,262 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+}
+header{
+    color: #4e4e4e;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #e7e7e7;
+}
+.container{
+    padding: 2.5rem 0;
+    width: 80%;
+}
+header>.container{
+    padding: 1.25rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header> .container>nav>ul{
+    display: flex;
+    list-style: none;
+}
+header> .container h1{
+    font-size: 1.875rem;
+    text-transform: uppercase;
+}
+header> .container>nav>ul li a{
+    text-decoration: none;
+    padding-inline: 0.625rem ;
+    color: #4e4e4e;
+    font-weight: 600;
+}
+@media (max-width:48rem){
+    header>.container{
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    header>.container nav {
+        width: 100%;
+    }
+    header>.container nav ul{
+        width: 100%;
+        padding-block-start: 1.25rem;
+        justify-content: space-between;
+        font-size: 0.825rem;
+    }
+}
+@media (max-width:30rem){
+    header>.container{
+        position: relative;
+        padding-block-end: 0;
+
+    }
+    header>.container nav {
+        position: relative;
+        height: 2.5rem;
+        background-color: #4e4e4e;
+    }
+    header>.container nav::after{
+        content: 'hover here to show menu';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #bbb;
+    }
+    header>.container nav ul{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        display: none;
+        flex-direction: column;
+        background-color: #4e4e4e;
+    }
+    header>.container nav:hover  ul{
+        display: flex;
+    }
+    header>.container nav ul li{
+        width: 100%;
+    }
+    header>.container nav ul li a{
+        display: block;
+        color: #999;
+        padding-block: 0.625rem;
+        text-align: center;
+        border-block-end: 0.0625rem solid #999;
+    }
+}
+/*landin img*/
+
+main >img.landing{
+    width: 100%;
+}
+
+/*features*/
+
+main>.features{
+    display: flex;
+    justify-content: center;
+}
+main .features .container{
+    display: flex;
+    flex-wrap: wrap;
+}
+main .features .container .feat{
+    width: 25%;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+main .features .container .feat h2,
+main .features .container .feat p{
+    color: #4e4e4e;
+    margin-block: 0.625rem;
+}
+@media (max-width:60rem) {
+    main .features .container .feat{
+        width: 50%;
+    }
+}
+@media (max-width:30rem){
+    main .features .container .feat{
+        width: 100%;
+    }
+}
+/*latest work*/
+.last-work{
+    display: flex;
+    justify-content: center;
+}
+.last-work .container{
+    border-block-start: 0.0875rem solid #ddd;
+}
+.last-work .container .work{
+    display: flex;
+}
+.last-work .container .work .card{
+    width: calc(100% / 3);
+    margin-inline-end: 1.25rem;
+    margin-block: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+.last-work .container h2,
+.last-work .container .work .card h3,
+.last-work .container .work .card p{
+    margin-block: 0.625rem 0.3125rem;
+    color: #4e4e4e;
+}
+.last-work .container .work .card h4{
+    color: #bbb;
+    font-weight: 400;
+    font-size: 0.8125rem;
+}
+.last-work .container .work .card p{
+    font-weight: 600;
+    line-height: 1.5;
+}
+@media (max-width:48rem) {
+    .last-work .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .last-work .container .work{
+        flex-direction: column;
+        align-items: center;
+    }
+    .last-work .container .work .card{
+        width: 80%;
+
+    }
+    .last-work .container .work .card p{
+        font-size: 0.825rem;
+    }
+}
+
+/* qoute */
+.qoute{
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.qoute>.container{
+    max-width: 37.5rem;
+}
+.qoute>.container img{
+    padding-block-end: 1.25rem;
+}
+.qoute .container p{
+    line-height: 1.5;
+    font-weight: 600;
+    color: #4e4e4e;
+}
+
+/*footer*/
+
+footer{
+    color: #aaa;
+    background-color: #202020;
+}
+footer h3{
+    color: #555;
+}
+footer ul{
+    list-style: none;
+}
+footer .lists,
+footer .copy{
+    display: flex;
+    justify-content: center;
+}
+.lists >.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.lists >.container ul{
+    width: 25%;
+    padding: 0.625rem;
+}
+.lists >.container ul li{
+    padding-block: 0.625rem;
+    font-size: 0.825rem;
+}
+.copy .container {
+    font-size: 0.825rem;
+}
+.copy .container p{
+    margin-block: 0.625rem;
+}
+.copy .container a{
+    text-decoration: none;
+    color: #ddd;
+}
+@media (max-width:60rem) {
+    .lists >.container ul{
+        width: 50%;
+    }
+}
+@media (max-width:48rem) {
+    .lists >.container ul{
+        width: 100%;
+    }
+}
